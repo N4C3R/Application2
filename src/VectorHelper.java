@@ -11,10 +11,21 @@ public VectorHelper(){
 	Vecteur=new ArrayList<Integer>();
                       }
 /** Methode d'ajout d'un element*/
-public void addVectElemnt(int value)
+public void addVectElement(int value)
       {
 	  Vecteur.add(value);
       }
+/**Methode Get d'un element par son index */
+
+public int getElement(int index){
+	return Vecteur.get(index);
+}
+
+/** Methode retournant la taille du vecteur */
+
+public int VectSize(){
+	return Vecteur.size();
+                     }
 
 /**Methode d'affichage d'un vecteur*/
 public void Afficher(){
@@ -23,6 +34,7 @@ public void Afficher(){
 
 /**Methode de trie d'un vecteur*/      
 public void Trie(){
+
 	for(int i=0;i<Vecteur.size()-1;i++){
 	   for(int j=i+1;j<Vecteur.size();j++){
 		   if(Vecteur.get(i)>Vecteur.get(j)) {
@@ -34,17 +46,26 @@ public void Trie(){
 	                                      }
 	                                   }
                   }
-/**Methode Get d'un element par son index */
 
-public int getElemnt(int index){
-	return Vecteur.get(index);
+/** Somme de deux vecteurs **/
+public void somme (VectorHelper v1 ) throws DiffrentSizeException
+{
+VectorHelper result=new VectorHelper();
+int i=0;
+
+if(this.VectSize()!=v1.VectSize()) throw new DiffrentSizeException();
+
+else
+	
+ for (i=0;i<v1.VectSize();i++)
+ { 
+    result.addVectElement(this.getElement(i)+v1.getElement(i));
+ }
+	
+  this.Vecteur=result.Vecteur;
 }
 
-/** Methode retournant la taille du vecteur */
 
-public int VectSize(){
-	return Vecteur.size();
-                     }
 /** methode retournant le vecteur inverser */
 public void VectInverser(){
     int temp;
