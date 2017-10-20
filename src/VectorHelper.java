@@ -45,6 +45,7 @@ public int getElemnt(int index){
 public int VectSize(){
 	return Vecteur.size();
                      }
+/** methode retournant le vecteur inverser */
 public void VectInverser(){
     int temp;
 	for(int i=0;i<Vecteur.size()/2;i++){
@@ -53,6 +54,32 @@ public void VectInverser(){
     	Vecteur.set(this.VectSize()-i-1, temp);
     }
                           }
+/** retourn le max des element de ce vecteur*/
+public int VectMax(){
+	int m=this.Vecteur.get(0);	
+	for(int i=1;i<this.VectSize();i++){
+		if(Vecteur.get(i)>m) m=Vecteur.get(i);
+	}
+	return m;
+}
+
+/** retourn le minimum de ce vecteur*/
+
+public int VectMin(){
+	int m=this.Vecteur.get(0);	
+	for(int i=1;i<this.VectSize();i++){
+		if(Vecteur.get(i)<m) m=Vecteur.get(i);
+	}
+	return m;
+}
+
+/**multiplier le vecteur par un entier donner dans les paramétre de la methode*/
+
+public void VectMultiplication(int value){
+	for(int i=0;i<this.VectSize();i++){
+		this.Vecteur.set(i,Vecteur.get(i)*value);
+	                                  }
+	                                     }
 
 /**Methode equals */
 @Override
