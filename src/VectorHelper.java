@@ -9,6 +9,7 @@ public VectorHelper(){
 	
 	
 	Vecteur=new ArrayList<Integer>();
+	
                       }
 /** Methode d'ajout d'un element*/
 public void addVectElement(int value)
@@ -27,12 +28,14 @@ public int VectSize(){
 	return Vecteur.size();
                      }
 
-/**Methode d'affichage d'un vecteur*/
+/** 
+   *Methode d'affichage d'un vecteur*/
 public void Afficher(){
 	System.out.println(Vecteur.toString());
                 }
 
-/**Methode de trie d'un vecteur*/      
+/** 
+     * Methode de trie d'un vecteur */      
 public void Trie(){
 
 	for(int i=0;i<Vecteur.size()-1;i++){
@@ -47,7 +50,7 @@ public void Trie(){
 	                                   }
                   }
 
-/** Somme de deux vecteurs **/
+/** Somme de deux vecteurs */
 public void somme (VectorHelper v1 ) throws DiffrentSizeException
 {
 VectorHelper result=new VectorHelper();
