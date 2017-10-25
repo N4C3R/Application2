@@ -1,41 +1,59 @@
 import java.util.ArrayList;
 
 public class VectorHelper {
-/** ArrayList contenant les elements du vecteur */	
+/** 
+ * crée un vecteur sous forme d'un arrayListe
+*/	
 public ArrayList<Integer> Vecteur;
 
-/** Constructeur */
+/** 
+ * déclarer un constructeur 
+ */
 public VectorHelper(){
 	
 	
 	Vecteur=new ArrayList<Integer>();
 	
                       }
-/** Methode d'ajout d'un element*/
+/** 
+ * Methode d'ajout d'un element
+ * contien le paramétre :
+ * @param value
+ */
 public void addVectElement(int value)
       {
 	  Vecteur.add(value);
       }
-/**Methode Get d'un element par son index */
+/**
+ * Methode Get d'un element on utilise son index
+ * @param index
+ * @return la valeur de l'élement 
+ */
 
 public int getElement(int index){
 	return Vecteur.get(index);
 }
 
-/** Methode retournant la taille du vecteur */
+/** 
+ * Methode qui retourn la taille du vecteur
+ * @return la taille du vecteur
+ */
 
 public int VectSize(){
 	return Vecteur.size();
                      }
 
 /** 
-   *Methode d'affichage d'un vecteur*/
+   * Methode d'affichage d'un vecteur
+ */
 public void Afficher(){
 	System.out.println(Vecteur.toString());
                 }
 
 /** 
-     * Methode de trie d'un vecteur */      
+     * Methode de trie d'un vecteur
+     * @author abdeslam 
+ */      
 public void Trie(){
 
 	for(int i=0;i<Vecteur.size()-1;i++){
@@ -50,7 +68,12 @@ public void Trie(){
 	                                   }
                   }
 
-/** Somme de deux vecteurs */
+/**
+ *  methode qui réalise la Somme de deux vecteurs 
+ *  @throws DiffrentSizeException si jamais la taille des deux vecteur n'est pas la même
+ *  @param vl
+ *  @author nacer
+ */
 public void somme (VectorHelper v1 ) throws DiffrentSizeException
 {
 VectorHelper result=new VectorHelper();
@@ -69,7 +92,9 @@ else
 }
 
 
-/** methode retournant le vecteur inverser */
+/**
+ *  methode qui inverse le vecteur 
+ */
 public void VectInverser(){
     int temp;
 	for(int i=0;i<Vecteur.size()/2;i++){
@@ -78,7 +103,10 @@ public void VectInverser(){
     	Vecteur.set(this.VectSize()-i-1, temp);
     }
                           }
-/** retourn le max des element de ce vecteur*/
+/** 
+ * retourn le max des element de ce vecteur
+ * @return l'element le plus grand dans ce vecteur 
+ */
 public int VectMax(){
 	int m=this.Vecteur.get(0);	
 	for(int i=1;i<this.VectSize();i++){
@@ -87,7 +115,10 @@ public int VectMax(){
 	return m;
 }
 
-/** retourn le minimum de ce vecteur*/
+/** 
+ * retourn le minimum de ce vecteur
+ * @return l'element le plus petit dans le vecteur
+ */
 
 public int VectMin(){
 	int m=this.Vecteur.get(0);	
@@ -97,7 +128,10 @@ public int VectMin(){
 	return m;
 }
 
-/**multiplier le vecteur par un entier donner dans les paramétre de la methode*/
+/**
+ * multiplier le vecteur par un entier donner dans les paramétre de la methode
+ * @param value
+ */
 
 public void VectMultiplication(int value){
 	for(int i=0;i<this.VectSize();i++){
@@ -105,7 +139,12 @@ public void VectMultiplication(int value){
 	                                  }
 	                                     }
 
-/**Methode equals */
+/**
+ * Methode qui teste si deux vecteur sont egaux 
+ * @param v
+ * @return vrai si son egaux faut sinon 
+ * @see vectSize
+ */
 @Override
 public boolean equals (Object V)  { 
 	boolean s=false;
