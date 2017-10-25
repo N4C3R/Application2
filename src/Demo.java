@@ -4,7 +4,6 @@ public class Demo {
 	public static void main(String[] args) {
 	VectorHelper v1=new VectorHelper();
 	VectorHelper v2=new VectorHelper();
-	VectorHelper v3=new VectorHelper(); // Objet visant a simuler un conflit
 
 	
 	
