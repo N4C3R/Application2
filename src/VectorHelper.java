@@ -18,7 +18,7 @@ public VectorHelper(){
 /** 
  * Methode d'ajout d'un element
  * contien le paramétre :
- * @param value
+ * @param value valeur de l'element a ajouter au vecteur
  */
 public void addVectElement(int value)
       {
@@ -26,7 +26,7 @@ public void addVectElement(int value)
       }
 /**
  * Methode Get d'un element on utilise son index
- * @param index
+ * @param index l'index de l'element qu'on veut consulter
  * @return la valeur de l'élement 
  */
 
@@ -71,7 +71,7 @@ public void Trie(){
 /**
  *  methode qui réalise la Somme de deux vecteurs 
  *  @throws DiffrentSizeException si jamais la taille des deux vecteur n'est pas la même
- *  @param vl
+ *  @param vl vecteur qu'on somme avec l'objet qui appele la methode somme.
  *  @author nacer
  */
 public void somme (VectorHelper v1 ) throws DiffrentSizeException
@@ -130,7 +130,7 @@ public int VectMin(){
 
 /**
  * multiplier le vecteur par un entier donner dans les paramétre de la methode
- * @param value
+ * @param value valeur par laquelle on multiplie le vecteur 
  */
 
 public void VectMultiplication(int value){
@@ -141,7 +141,7 @@ public void VectMultiplication(int value){
 
 /**
  * Methode qui teste si deux vecteur sont egaux 
- * @param v
+ * @param v le vecteur qu'on compre a notre objet courant
  * @return vrai si son egaux faut sinon 
  * @see vectSize
  */
