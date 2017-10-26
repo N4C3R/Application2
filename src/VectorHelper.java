@@ -18,6 +18,7 @@ public VectorHelper(){
 /** 
  * Methode d'ajout d'un element
  * contien le paramétre :
+ * ex: this.Vecteur=(1,2,3) => this.addVectElement(4) = (1,2,3,4)
  * @param value valeur de l'element a ajouter au vecteur
  */
 public void addVectElement(int value)
@@ -37,6 +38,7 @@ public int getElement(int index){
 /** 
  * Methode qui retourn la taille du vecteur
  * @return la taille du vecteur
+ * ex: this.Vecteur=(1,2,3) => this.getElement(2)=2
  */
 
 public int VectSize(){
@@ -52,6 +54,7 @@ public void Afficher(){
 
 /** 
      * Methode de trie d'un vecteur
+     * ex: this.Vecteur=(3,1,2) => this.Trie()=(1,2,3)
      * @author abdeslam 
  */      
 public void Trie(){
@@ -72,6 +75,7 @@ public void Trie(){
  *  methode qui réalise la Somme de deux vecteurs 
  *  @throws DiffrentSizeException si jamais la taille des deux vecteur n'est pas la même
  *  @param vl vecteur qu'on somme avec l'objet qui appele la methode somme.
+ *  ex: this.Vecteur=(1,1,1) v1.Vecteur=(2,2,2) => this.somme(v1)=(3,3,3)
  *  @author nacer
  */
 public void somme (VectorHelper v1 ) throws DiffrentSizeException
@@ -94,6 +98,7 @@ else
 
 /**
  *  methode qui inverse le vecteur 
+ *  ex: this.vecteur=(1,2,3) => this.VectInverser()=(3,2,1)
  */
 public void VectInverser(){
     int temp;
@@ -106,6 +111,7 @@ public void VectInverser(){
 /** 
  * retourn le max des element de ce vecteur
  * @return l'element le plus grand dans ce vecteur 
+ * ex: this.vecteur=(1,2,3) => this.VectMax()=3
  */
 public int VectMax(){
 	int m=this.Vecteur.get(0);	
@@ -118,6 +124,7 @@ public int VectMax(){
 /** 
  * retourn le minimum de ce vecteur
  * @return l'element le plus petit dans le vecteur
+ * ex:this.vecteur=(1,2,3) => this.VectMin()=1
  */
 
 public int VectMin(){
@@ -131,6 +138,7 @@ public int VectMin(){
 /**
  * multiplier le vecteur par un entier donner dans les paramétre de la methode
  * @param value valeur par laquelle on multiplie le vecteur 
+ * ex: this.vecteur=(1,1,1) value=2 => this.VectMultiplication(2)==(2,2,2)
  */
 
 public void VectMultiplication(int value){
@@ -144,6 +152,7 @@ public void VectMultiplication(int value){
  * @param v le vecteur qu'on compre a notre objet courant
  * @return vrai si son egaux faut sinon 
  * @see vectSize
+ * ex: v.vecteur=(1,2,1) this.vecteur=(2,3,4) => this.equals(v)==false
  */
 @Override
 public boolean equals (Object V)  { 
